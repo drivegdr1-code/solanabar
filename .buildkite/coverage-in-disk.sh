@@ -9,7 +9,7 @@
 
 set -e
 cd "$(dirname "$0")"/..
-source ci/_
+source ci/_a
 sudo chmod 0777 ci/buildkite-pipeline-in-disk.sh
 
 _ ci/buildkite-pipeline-in-disk.sh pipeline.yml
@@ -17,3 +17,4 @@ echo +++ pipeline
 cat pipeline.yml
 
 _ buildkite-agent pipeline upload pipeline.yml
+Corrige erro de digitação no README
